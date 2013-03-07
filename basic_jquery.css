@@ -1,6 +1,20 @@
 .zif {
-    border-radius: 50px;
-    border:solid 10px #f00; 
-    min-width:501px;
-    min-height:501px;  
+	display: inline;
+	background-color: #0f0;
+	height: 10px;
+	width: 10px;
+}
+.zaf {
+	display: inline;
+	height: 10px;
+	width: 10px;
+	background-color: #00f;
+	border-radius: 5px;
+}
+.zof {
+	display: inline;
+	height: 0;
+	width: 0;
+	border-bottom: 1em solid #f00;
+	border-left: 1em solid transparent;
 }

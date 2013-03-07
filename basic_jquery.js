@@ -1,6 +1,8 @@
 var clickCount = 0;
 var mouseDistance = 0;
 var prevMousePos = [];
+var mouseProgress = 0;
+var timeSpent = 0;
 
 $(document).ready(f);
 $(document).mousemove(updateMouseDistance);
@@ -11,23 +13,35 @@ function f() {
 	$("#click_count").text(clickCount);
 
 	$("#button").click(function () {
-		$("#content").append("POW! ");
 		$("#click_count").text(++clickCount);
-		console.log("(" + prevMousePos["X"] + ", " + prevMousePos["Y"] + ")");
-		console.log(mouseDistance);
+		if (clickCount % 5 == 0) {
+			$("#progress").append($("<img></img>").addClass("zaf"));
+		}
 	});
+
+	setInterval(a, 100);
+
 }
 
 function updateMouseDistance(event) {
-	if (!prevMousePos["X"]) {
-		prevMousePos["X"] = event.pageX;
+	if (prevMousePos["X"] && prevMousePos["Y"]) {
+		var newMouseMovement = Math.abs(prevMousePos["X"] - event.pageX) +
+		Math.abs(prevMousePos["Y"] - event.pageY);
+		mouseDistance += newMouseMovement;
+		mouseProgress += newMouseMovement;
 	}
-	if (!prevMousePos["Y"]) {
-		prevMousePos["Y"] = event.pageY;
-	}
-	mouseDistance += Math.abs(prevMousePos["X"] - event.pageX) +
-	 Math.abs(prevMousePos["Y"] - event.pageY);
 	prevMousePos["X"] = event.pageX;
 	prevMousePos["Y"] = event.pageY;
 	$("#mouse_distance").text(mouseDistance);
+	if (mouseProgress > 5000) {
+		$("#progress").append($("<img></img>").addClass("zif"));
+		mouseProgress = 0;
+	}
+}
+
+function a() {
+	$("#time_spent").text(++timeSpent);
+	if (timeSpent % 30 == 0) {
+		$("#progress").append($("<img></img>").addClass("zof"));
+	}
 }
