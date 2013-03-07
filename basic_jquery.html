@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Playing with jQuery</title>
+	<title>jQuery playground</title>
 	<meta charset="utf-8">
 	<meta name="description" content="Playing with jQuery">
 	<meta name="Author" content="Donkeylube Software Studios">
@@ -11,17 +11,28 @@
 </head>
 
 <body>
+<div class="mainbody">
+	<h1>jQuery Playground</h1>
+
 	<p id="content"></p>
 
-	<ul>Click count: <span id="click_count"></span></ul>
-	<ul>Mouse distance: <span id="mouse_distance"></span></ul>
-	<ul>Time spent: <spain id="time_spent"></span></ul>
+	<ul>
+		<li>Click count: <span id="click_count"></span></li>
+		<li>Mouse distance: <span id="mouse_distance"></span></li>
+		<li>Time spent: <span id="time_spent"></span></li>
+	</ul>
 
-	<input id="button" type="button" value="Click me!"></input>
+	<!--input id="button" type="button" value="Click me!"-->
 	
 	<div id="progress"></div>
 	
 	<script type="text/javascript" src="basic_jquery.js"></script>
+	<script type="text/javascript" src="jquery.jrumble.1.3.js"></script>
+</div>
+
+<div class="credits">
+	Donkeylube Software Studios 2013
+</div>
 </body>
 
 </html>
