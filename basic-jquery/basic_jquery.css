@@ -1,0 +1,101 @@
+body {
+	background-color: #E3DF9D;
+	background-image: url("background.png");
+	font-family: "verdana";
+	color: #3E2735;
+}
+h1 {
+	background-color: #DDE0CF;
+	padding: 20px;
+	border-radius: 10px;
+	text-shadow: 2px 2px 2px #AAB09C;
+}
+
+.credits {
+	font-weight: bold;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	color: #000;	
+	text-shadow: 0px 0px 5px #FFF, 0px 0px 10px #FFF, 0px 0px 15px #FFF;
+}
+
+.mainbody {
+	width: 60%;
+	height: 400px;
+	padding-top: 1px;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 280px;
+	margin-bottom: 20px;
+	background-color: #FDFDFD;
+	border: 3px solid #DDE0CF;
+	border-radius: 40px;
+	box-shadow: 20px 20px 50px #3E2735;
+	opacity: 0.93;
+	position: relative;
+	z-index: 100;
+}
+
+
+.time {
+	display: inline;
+	background-color: #1693A5;
+	height: 20px;
+	width: 20px;
+}
+.click {
+	display: inline;
+	height: 20px;
+	width: 20px;
+	background-color: #FF0066;
+	border-radius: 10px;
+}
+.move {
+	display: inline;
+	height: 0;
+	width: 0;
+	border-bottom: 20px solid #FBB829;
+	border-left: 20px solid transparent;
+}
+
+#progress {
+	margin-top: 2px;
+	border: 1px solid #DED;
+	height: 30px;
+	position: relative;
+}
+
+
+/* Spritely stuff */
+#stage {
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+}
+.stage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 900px;
+	height: 420px;
+	overflow: hidden;
+	z-index: -1;
+}
+
+#clouds {
+	background: transparent url("cloud.png") 305px 102px repeat-x;
+}
+#hill1 {
+    background: transparent url("hill-with-windmill.png") 0 104px repeat-x;
+}
+#hill2 {
+	background: transparent url("hill2.png") 0 258px repeat-x;
+}
+#sky {
+	background: #aedfe5 url("sky1.png") 0 0 repeat-x;
+}
